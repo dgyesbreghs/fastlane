@@ -327,6 +327,11 @@ module Spaceship
         self.kind_of?(PushCertificate)
       end
 
+      # @retrun (Bool): Is this a certificate for passbooks?
+      def is_passbook?
+        self.kind_of?(Passbook)
+      end
+
       # @return (Bool) Is this a Mac profile?
       def mac?
         MAC_CERTIFICATE_TYPE_IDS.include?(type_display_id)
